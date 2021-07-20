@@ -1,13 +1,13 @@
 {
   "name": "gifbot",
   "version": "1.0.0",
-  "description": "A Discord bot that shows a gif",
+  "description": "A simple Discord bot to show GIF's from Tenor, made with Discord.js.",
   "main": "index.js",
   "scripts": {
     "start": "node ."
   },
   "author": "Bram/sys-256",
-  "license": "MIT",
+  "license": "The MIT license",
   "dependencies": {
     "discord.js": "^12.5.3",
     "node-fetch": "^2.6.1",
