@@ -10,7 +10,6 @@
   "license": "The MIT license",
   "dependencies": {
     "discord.js": "^12.5.3",
-    "node-fetch": "^2.6.1",
-    "prompt-sync": "^4.2.0"
+    "node-fetch": "^2.6.1"
   }
 }
