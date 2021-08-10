@@ -6,6 +6,22 @@
   "scripts": {
     "start": "node ."
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sys-256/GifBot.git"
+  },
+  "keywords": [
+    "Discord",
+    "discord",
+    "Bot",
+    "bot",
+    "Discord.js",
+    "discord.js",
+    "gif",
+    "GIF",
+    "tenor",
+    "Tenor"
+  ],
   "author": "Bram/sys-256",
   "license": "The MIT license",
   "dependencies": {
