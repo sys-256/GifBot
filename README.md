@@ -24,9 +24,10 @@ A simple Discord bot to show GIF's from Tenor, made with Discord.js.
 ### Actual installation
 1. Clone this repository
 2. Fill in your Discord bot token and your Tenor API key in config.json
-3. Run the bot with `node .`
-4. Add the bot to your server
-5. You're done!
+3. Install the required packages with `npm i`
+4. Run the bot with `node .`
+5. Add the bot to your server
+6. You're done!
 
 # License
 This project is licensed under [the MIT license](https://en.wikipedia.org/wiki/MIT_License), so you can use it wherever you want, as long as you credit me.
