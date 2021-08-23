@@ -22,7 +22,11 @@ client.login(config.DISCORD_API_KEY);
 const prefix = "gif ";
 
 // Sets the user activity
-client.on("ready", client.user.setActivity(config.ACTIVITY || client.guilds.cache.size + " servers!", { type: config.ACTIVITY_TYPE || "WATCHING" }));
+client.on("ready", () => {
+    const ACTIVITY = config.ACTIVITY || client.guilds.cache.size + " servers!";
+    const ACTIVITY_TYPE = config.ACTIVITY_TYPE || "WATCHING";
+    client.user.setActivity(ACTIVITY, { type: ACTIVITY_TYPE })
+});
 
 // Executes when someone sends a message
 client.on("message", async (message) => {
