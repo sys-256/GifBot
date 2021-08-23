@@ -31,7 +31,7 @@ client.on("message", async (message) => {
     // Makes sure the user isn't a bot
     if (message.author.bot) return;
     // Makes sure the message starts with the prefix
-    if (!message.content.startsWith(prefix)) return;
+    if (!message.content.toLowerCase().startsWith(prefix)) return;
 
     // Gets the command and args from the sended message
     const commandBody = message.content.slice(prefix.length);
