@@ -8,10 +8,8 @@ async function get_gif_url(url) {
     const gif_response = await fetch(url);
     // Converts it to json
     const gif_data = await gif_response.json();
-    // Gets the url out of the data
-    const gif_url = gif_data.results[0].media[0].gif.url;
     // Returns the url
-    return gif_url;
+    return gif_data.results[0].media[0].gif.url;
 }
 
 // Logs in
