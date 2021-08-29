@@ -1,29 +1,30 @@
-const fetch = require("node-fetch");
 const Discord = require("discord.js");
+const client = new Discord.Client();
+const fetch = require("node-fetch");
 const config = require("./config.json");
 
 // Creates the get_gif_url function
 async function get_gif_url(url) {
-    // Fetches the gif url
-    const gif_response = await fetch(url);
-    // Converts it to json
-    const gif_data = await gif_response.json();
-    // Returns the url
-    return gif_data.results[0].media[0].gif.url;
+    try {
+        // Fetches the gif url
+        const gif_response = await fetch(url);
+        // Converts it to json
+        const gif_data = await gif_response.json();
+        // Returns the url
+        return gif_data.results[0].media[0].gif.url;
+    }
+    catch { }
 }
-
-// Logs in
-const client = new Discord.Client();
-client.login(config.DISCORD_API_KEY);
 
 // Sets the prefix
 const prefix = "gif ";
 
 // Sets the user activity
 client.on("ready", () => {
-    const ACTIVITY = config.ACTIVITY || client.guilds.cache.size + " servers!";
+    const ACTIVITY = config.ACTIVITY || `${client.guilds.cache.size} servers with ${client.guilds.cache.map((g) => g.memberCount).reduce((a, c) => a + c)} members!`;
     const ACTIVITY_TYPE = config.ACTIVITY_TYPE || "WATCHING";
-    client.user.setActivity(ACTIVITY, { type: ACTIVITY_TYPE })
+    client.user.setActivity(ACTIVITY, { type: ACTIVITY_TYPE });
+    console.log(`And we're up! I'm currently serving ${client.guilds.cache.size} servers with ${client.guilds.cache.map((g) => g.memberCount).reduce((a, c) => a + c)} members!`);
 });
 
 // Executes when someone sends a message
@@ -44,8 +45,7 @@ client.on("message", async (message) => {
 Thanks for using this bot, to use it, just type 'gif <gif you want to search>'.
 For example: 'gif this bot is the best!', and it will reply with the highest ranked gif about 'this bot is the best!' on Tenor.\n
 Success!
-PS: Type 'gif how-many-servers' to see in how many servers I am!
-PSS: [You can upvote me on Top.GG!](https://top.gg/bot/867011965988503562)`)
+PS: [You can upvote me on Top.GG!](https://top.gg/bot/867011965988503562)`)
 
         message.reply(embed);
     }
@@ -56,3 +56,6 @@ PSS: [You can upvote me on Top.GG!](https://top.gg/bot/867011965988503562)`)
         );
     }
 });
+
+// Logs in
+client.login(config.DISCORD_API_KEY);
