@@ -16,9 +16,6 @@ async function get_gif_url(url) {
     catch { }
 }
 
-// Sets the prefix
-const prefix = "gif ";
-
 // Sets the user activity
 client.on("ready", () => {
     const ACTIVITY = config.ACTIVITY || `${client.guilds.cache.size} servers with ${client.guilds.cache.map((g) => g.memberCount).reduce((a, c) => a + c)} members!`;
@@ -32,10 +29,10 @@ client.on("message", async (message) => {
     // Makes sure the user isn't a bot
     if (message.author.bot) return;
     // Makes sure the message starts with the prefix
-    if (!message.content.toLowerCase().startsWith(prefix)) return;
+    if (!message.content.toLowerCase().startsWith("gif ")) return;
 
     // Gets the command and args from the sended message
-    const commandBody = message.content.slice(prefix.length);
+    const commandBody = message.content.slice(4);
     const args = commandBody.split(' ');
     const command = args.shift().toLowerCase();
 
