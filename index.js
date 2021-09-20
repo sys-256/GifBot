@@ -35,8 +35,6 @@ client.on("ready", () => {
     const ACTIVITY_TYPE = config.ACTIVITY_TYPE || "WATCHING";
     client.user.setActivity(ACTIVITY, { type: ACTIVITY_TYPE });
     console.log(`And we're up! I'm currently serving ${client.guilds.cache.size} servers with ${client.guilds.cache.map((g) => g.memberCount).reduce((a, c) => a + c)} members!`);
-
-    fs.writeFileSync("data.json", JSON.stringify(client.guilds.cache.map((g) => g)));
 });
 
 // Executes when someone sends a message
@@ -62,6 +60,7 @@ PS: [You can upvote me on Top.GG!](https://top.gg/bot/867011965988503562)`)
 
         message.reply(embed);
     }
+    // If the text is "stats", it will show the stats message
     else if (command === "stats") {
         const embed = new Discord.MessageEmbed()
         .setTitle(`Stats:`)
