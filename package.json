@@ -1,31 +1,31 @@
 {
-  "name": "gifbot",
-  "version": "1.0.0",
-  "description": "A simple Discord bot to show GIF's from Tenor, made with Discord.js.",
-  "main": "index.js",
-  "scripts": {
-    "start": "node ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sys-256/GifBot.git"
-  },
-  "keywords": [
-    "Discord",
-    "discord",
-    "Bot",
-    "bot",
-    "Discord.js",
-    "discord.js",
-    "gif",
-    "GIF",
-    "tenor",
-    "Tenor"
-  ],
-  "author": "Bram/sys-256",
-  "license": "The MIT license",
-  "dependencies": {
-    "discord.js": "^12.5.3",
-    "node-fetch": "^2.6.1"
-  }
+    "name": "gifbot",
+    "version": "1.0.0",
+    "description": "A simple Discord bot to show GIF's from Tenor.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sys-256/GifBot.git"
+    },
+    "keywords": [
+        "Discord",
+        "discord",
+        "Bot",
+        "bot",
+        "Discord.js",
+        "discord.js",
+        "gif",
+        "GIF",
+        "tenor",
+        "Tenor"
+    ],
+    "author": "Bram (sys-256)",
+    "license": "The MIT license",
+    "dependencies": {
+        "discord.js": "^12.5.3",
+        "node-fetch": "^2.6.1"
+    }
 }
