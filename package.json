@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "description": "A simple Discord bot to show GIF's from Tenor.",
     "main": "index.js",
+    "type": "module",
     "scripts": {
         "start": "node ."
     },
@@ -25,7 +26,8 @@
     "author": "Bram (sys-256)",
     "license": "The MIT license",
     "dependencies": {
-        "discord.js": "^12.5.3",
-        "node-fetch": "^2.6.1"
+        "discord.js": "^13.6.0",
+        "node-fetch": "^3.2.2",
+        "node-os-utils": "^1.3.6"
     }
 }
