@@ -11,6 +11,8 @@ A simple Discord bot to show GIF's from Tenor, made with Discord.js.
 
 Go to https://discord.com/api/oauth2/authorize?client_id=867011965988503562&permissions=2048&scope=bot, and add the bot to a server you have the required permissions on.
 
+**Important update: I have decided to take the bot offline considering it was used very little. Hosting the bot yourself is now the only option if you plan on using GifBot.**
+
 ## Hosting it yourself
 
 ### Prerequisites
